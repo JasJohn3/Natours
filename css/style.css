@@ -31,7 +31,107 @@ body{
 position: absolute;
 top: 3%;
 left: 3%;
+animation: moveInTop 3s ease-in-out;
+/* 
+animation-name: moveInTop;
+animation-duration: 3s; 
+*/
 }
 .logo{
 height: 35px;
+}
+.heading-primary{
+color: #ffffff;
+text-transform: uppercase;
+backface-visibility: hidden;
+}
+.heading-primary-main{
+display: block;
+font-size: 60px;
+font-weight: 700;
+letter-spacing: 35px;
+animation: moveInTop 3s ease-in-out;
+
+/* 
+animation-name: moveInLeft;
+animation-duration: 3s;
+animation-delay: 3s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 3; 
+*/
+}
+.heading-primary-sub{
+display: block;
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 17.4px;
+animation: moveInBottom 3s ease-in-out;
+/* 
+animation-name: moveInRight;
+animation-duration: 3s; 
+*/
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    80%{
+        transform: translateX(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    80%{
+        transform: translateY(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    80%{
+        transform: translateY(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveRotate{
+    0%{
+        opacity: 1;
+        transform: translateX(-50%) rotate(-90deg);
+    }
+    25%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    75%{
+        transform: translateX(50%) rotate(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
 }
